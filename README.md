@@ -53,6 +53,8 @@ root@vps1723:/tmp#
 
 ## awk
 awk '{print "admin:XAMPP with WebDAV:" $0}' /usr/share/wordlists/rockyou.txt | john hashes.txt --format=raw-md5 --pipe  
+select all the 4-char passwords and send to hashcat:  
+awk 'length($0)==4' ~/wordlists/rockyou.txt | hashcat -m 3200 -a 0 --potfile-disable temp.txt  
 
 ## john
 awk '{print "admin:XAMPP with WebDAV:" $0}' /usr/share/wordlists/rockyou.txt | john hashes.txt --format=raw-md5 --pipe  
