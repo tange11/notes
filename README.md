@@ -13,3 +13,6 @@ sd@fucksheep.org 2010
 
 ## awk
 awk '{print "admin:XAMPP with WebDAV:" $0}' /usr/share/wordlists/rockyou.txt | john hashes.txt --format=raw-md5 --pipe  
+
+## john
+awk '{print "admin:XAMPP with WebDAV:" $0}' /usr/share/wordlists/rockyou.txt | john hashes.txt --format=raw-md5 --pipe  
